@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Alunos</title>
+    <script src="script.js" defer></script>
+
+
+
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background-color: #c6e2f1;
+        color: #000000;
+        min-height: 100vh;
+        padding: 40px 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #125ca1;
+        font-size: 32px;
+        margin-bottom: 30px;
+        text-transform: capitalize;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    form {
+        max-width: 950px;
+        margin: auto;
+        background-color: rgb(237, 246, 253);
+        padding: 35px;
+        border-radius: 10px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
+    }
+
+    fieldset {
+        border: 1px solid #82b2ec;
+        border-radius: 6px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    legend {
+        color: #161616;
+        font-size: 17px;
+        font-weight: bold;
+        padding: 0 8px;
+    }
+
+    label {
+        display: inline-block;
+        margin: 8px 5px 6px 0;
+        color: #041c2c;
+        font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 11px 12px;
+        margin-bottom: 12px;
+        border: 1px solid #f3f3f3;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #0a0a0a;
+        font-size: 15px;
+        outline: none;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+
+    button {
+        padding: 11px 25px;
+        border: none;
+        border-radius: 5px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    button[type="submit"] {
+        background-color: #2878c8;
+        color: white;
+    }
+
+    button[type="reset"]:hover {
+        background-color: #af3232;
+    }
+
+    .aprovado {
+        color: green;
+        font-weight: bold;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .Recuperação {
+        color: rgb(235, 164, 11);
+        font-weight: bold;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .Reprovado {
+        color: rgb(230, 16, 16);
+        font-weight: bold;
+        padding: 15px;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+    <h1>Cadastro de Alunos</h1>
+    <form id="formulario">
+        <fieldset>
+            <legend> Dados pessoais</legend>
+            <label for="nome">Nome</label>
+            <input type="text" maxlength="50" id="nome" required>
+
+            <fieldset>
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade1" name="idade" min="1" max="100" required>
+            </fieldset>
+            <fieldset>
+
+                <label for="datadenascimento">Data de Nascimento</label>
+                <input type="Data" name="datadenascimento" id="datadenascimento" maxlength="10" placeholder="00/00/0000"
+                    required>
+            </fieldset>
+            <fieldset>
+                <legend>Notas</legend>
+                <label for="Nota 1">Notas</label>
+                <input type="number" name="Nota 1" id="Nota1" maxlength="3" placeholder="0" min="0" max="10" required>
+            </fieldset>
+
+            <fieldset>
+                <label for="Nota 2">Notas</label>
+                <input type="number" name="Nota 2" id="Nota2" maxlength="3" placeholder="0" min="0" max="10" required>
+            </fieldset>
+            <fieldset>
+                <label for="Nota 3">Notas</label>
+                <input type="number" name="Nota 3" id="Nota3" maxlength="3" placeholder="0" min="0" max="10" required>
+            </fieldset>
+
+            <button type="submit"> Calcular Média</button>
+            <button type="reset"> Limpar</button>
+            <br>
+            <br>
+            <fieldset>
+                <legend> Resultado</legend>
+                <p id="nomeExibicao"></p>
+                <p id="idadee"></p>
+              
+               
+                <p id="nota1Resultado"></p>
+<p id="nota2Resultado"></p>
+<p id="nota3Resultado"></p>
+  <p id="media"></p>
+
+                <p id="resultado_final"></p>
+
+            </fieldset>
+
+</body>
+
+</html>
